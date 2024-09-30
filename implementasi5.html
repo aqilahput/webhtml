@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Registrasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffccdc; 
+            font-family: 'Times New Roman', sans-serif;
+            margin: 20px;
+        }
+        .pastel-table {
+            background-color: #ffeef8; 
+            border: 1px solid #ffc0cb; 
+        }
+        .pastel-table td {
+            background-color: #ffeef8; 
+        }
+        .btn-pastel-pink {
+            background-color: #ff506a; 
+            color: white;
+            border: none;
+        }
+        .btn-pastel-pink:hover {
+            background-color: #ffa3b5; 
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Formulir Registrasi dengan Bootstrap</h1>
+
+        <form action="/submit" method="POST">
+            <div class="table-responsive">
+                <table class="table table-bordered pastel-table">
+                    <tr>
+                        <td><label for="nama_depan">Nama Depan:</label></td>
+                        <td><input type="text" class="form-control" id="nama_depan" name="nama_depan" placeholder="Masukkan nama depan" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nama_belakang">Nama Belakang:</label></td>
+                        <td><input type="text" class="form-control" id="nama_belakang" name="nama_belakang" placeholder="Masukkan nama belakang" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="alamat">Alamat:</label></td>
+                        <td><input type="text" class="form-control" id="alamat" name="alamat" placeholder="Masukkan alamat" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="tanggal_lahir">Tanggal Lahir:</label></td>
+                        <td><input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="jenis_kelamin">Jenis Kelamin:</label></td>
+                        <td>
+                            <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
+                                <option value="">Pilih jenis kelamin</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="username">Username:</label></td>
+                        <td><input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password:</label></td>
+                        <td><input type="password" class="form-control" id="password" name="password" placeholder="Masukkan password" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="unggah_foto">Unggah Foto:</label></td>
+                        <td><input type="file" class="form-control" id="unggah_foto" name="unggah_foto" accept="image/*" required></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-pastel-pink">Daftar</button>
+                <button type="reset" class="btn btn-pastel-pink">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
